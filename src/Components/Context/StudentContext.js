@@ -24,8 +24,8 @@ const StudentContextProvider = (props) => {
     let countRef = useRef(students.length);
 
     console.log("id", countRef.current + 1)
-    const addStudent = (name, age, batch, course) => {
-        setStudents([...students, { id: countRef.current += 1, name, age, batch, course }])
+    const addStudent = (name, age,  course, batch) => {
+        setStudents([...students, { id: countRef.current += 1, name, age, course, batch}])
     }
 
     const updateStudent = (id, updatedStudent) => {
